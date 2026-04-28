@@ -146,7 +146,7 @@ async def main() -> None:
     agent = ReActAgent(tools=tools, llm=llm, verbose=True, streaming=False)
 
     print("--- Starting Agent ---")
-    question = "Who was Alan Turing and what is 5 added to 12.5?"
+    question = "Who was Alan Turing and what is 5 added to 12.5?用中文回答"
 
     # 第一次尝试：正常跑 ReAct
     try:
