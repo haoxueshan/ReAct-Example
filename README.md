@@ -24,3 +24,9 @@ llama_index 라이브러리를 사용하여 사례 1의 코드를 재현합다.
 ## 실행 방법：
 
 ``` python  ReAct-Example.py```
+
+
+# ReAct-hotpotqa-test.py
+google 라이브러리를 사용하여 사례 1의 코드를 재현합다.
+
+DATA 디렉터리에는 프로그램 실행 결과(hotpotQA 작업에서 ReAct의 생각과 행동)가 포함되어 있습니다.

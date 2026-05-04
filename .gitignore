@@ -243,8 +243,10 @@ env/
 venv/
 ENV/
 env.bak/
+.gitignore
+.idea/
 venv.bak/
-
+.gitattributes
 # Spyder project settings
 .spyderproject
 .spyproject

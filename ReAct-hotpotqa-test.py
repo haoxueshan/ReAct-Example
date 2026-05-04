@@ -123,7 +123,7 @@ Final Answer: 最终答案
 注意：
 - Action 必须是 wikipedia_search、add_numbers、multiply_numbers 之一。
 - Action Input 必须是合法 JSON。
-- 最终答案必须用中文。
+- 最终答案以及执行过程必须用韩语。
 - 不要输出 Markdown 表格。
 - 不要编造 Observation，Observation 只能由程序工具返回。
 """
