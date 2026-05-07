@@ -1,3 +1,56 @@
+# ReAct Agent
+
+## 실행 방법
+
+필요한 라이브러리 설치:
+
+```bash
+pip install openai python-dotenv requests
+```
+
+`.env` 파일 설정:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+프로그램 실행:
+
+```bash
+python ReAct-hotpotqa-test.py
+```
+
+## 사용한 라이브러리
+
+- openai
+- python-dotenv
+- requests
+- os
+- re
+- json
+
+## 구현 기능
+
+- ReAct 기본 흐름 구현
+- Wikipedia 검색 지원
+- 덧셈 계산 지원
+- 곱셈 계산 지원
+- Action 파싱 지원
+- 도구 호출 지원
+- 다중 단계 추론 지원
+
+## 실행 결과 이미지
+
+```markdown
+![실행 1결과 이미지](https://github.com/haoxueshan/ReAct-Example/blob/main/data/q1.png)
+```
+```markdown
+![실행 2결과 이미지](https://github.com/haoxueshan/ReAct-Example/blob/main/data/q2.png)
+```
+
+
+
+
 # react_case_reproduce.py
 ReAct 논문의 그림 1을 재현하는 데 사용된 네 가지 방법:
 1. Standard Prompting
@@ -26,7 +79,4 @@ llama_index 라이브러리를 사용하여 사례 1의 코드를 재현합다.
 ``` python  ReAct-Example.py```
 
 
-# ReAct-hotpotqa-test.py
-google 라이브러리를 사용하여 사례 1의 코드를 재현합다.
 
-DATA 디렉터리에는 프로그램 실행 결과(hotpotQA 작업에서 ReAct의 생각과 행동)가 포함되어 있습니다.

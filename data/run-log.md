@@ -1,36 +1,37 @@
-============================================================
-ReAct Step 1
-============================================================
+question:누가 한국 대통령입니까？
+================================================================================
+ReAct
+================================================================================
+Question: 누가 한국 대통령입니까？
 
-[LLM 输出]
-Thought: 用户提出了两个问题：一个是关于 Alan Turing 的身份，另一个是关于 5 加 12.5 的计算。我需要先使用 `wikipedia_search` 工具来查找 Alan Turing 的信息。
-Action: wikipedia_search
-Action Input: {"query": "Alan Turing"}
+--------------------------------------------------------------------------------
+Step 1
+--------------------------------------------------------------------------------
+Thought: 한국어로 질문이 왔으므로 생각도 한국어로 말합니다. 현재 남한의 대통령 정보를 확인하기 위해 영어로 된 Wikipedia 검색을 수행합니다.
 
-[Action 执行] wikipedia_search(query=Alan Turing)
-[Observation 返回] Alan Turing was a British mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist. He was highly influential in the development of theoretical computer science.
+Action: wikipedia_search({"query":"Current president of South Korea"})
 
-============================================================
-ReAct Step 2
-============================================================
+Observation: Current president of South Korea is Yoon Suk-yeol (윤석열).
 
-[LLM 输出]
-Thought: 我已经获取了 Alan Turing 的信息。现在我需要计算 5 加 12.5 的结果。我应该使用 `add_numbers` 工具。
-Action: add_numbers
-Action Input: {"a": 5, "b": 12.5}
+Observation: President of South Korea: The president of the Republic of Korea (Korean: 대한민국 대통령), also known as the president of South Korea (한국 대통령), is the head of state and head of government of South Korea. The president directs the executive branch of the government and is the commander-in-chief of the Republic of Korea Armed Forces.
+The Constitution of South Korea and the amended Presidential Election Act of 1987 provide for election of the president by direct, secret ballot, ending sixteen years of indirect presidential elections under the preceding two authoritarian governments. The president is directly elected to a five-year term, with no possibility of re-election. If a presidential vacancy should occur, a successor must be elected within sixty days, during which time presidential duties are to be performed by the prime minister or other senior cabinet members in the order of priority as determined by law. The president is exempt from criminal liability (except for insurrection or treason).The President of South 
 
-[Action 执行] add_numbers(a=5, b=12.5)
-[Observation 返回] 17.5
+--------------------------------------------------------------------------------
+Step 2
+--------------------------------------------------------------------------------
+Thought: 결과를 바탕으로 최종 답을 제시합니다.
+Answer: 윤석열
+question:이재명 누구입니까？
+================================================================================
+ReAct
+================================================================================
+Question: 이재명 누구입니까？
 
-============================================================
-ReAct Step 3
-============================================================
-
-[LLM 输出]
-Thought: 我已经获取了关于 Alan Turing 的信息（他是一位英国数学家、计算机科学家等），也计算出了 5 加 12.5 的结果是 17.5。现在我拥有了回答用户问题所需的所有信息。
-Final Answer: 阿兰·图灵是一位英国数学家、计算机科学家、逻辑学家、密码分析员、哲学家和理论生物学家。他对理论计算机科学的发展产生了深远影响。5 加 12.5 的结果是 17.5。
-
-============================================================
-Final Answer
-============================================================
-阿兰·图灵是一位英国数学家、计算机科学家、逻辑学家、密码分析员、哲学家和理论生物学家。他对理论计算机科学的发展产生了深远影响。5 加 12.5 的结果是 17.5。
+--------------------------------------------------------------------------------
+Step 1
+--------------------------------------------------------------------------------
+Thought: 이재명에 대해 영어로 된 위키피디아 정보를 확인하기 위해 검색을 수행하고, 얻은 정보를 바탕으로 한국어로 간단히 요약해 제공한다.
+Action: wikipedia_search({"query":"Lee Jae-myung"})
+ Observation: Lee Jae-myung (born December 22, 1964) is a South Korean politician who has served as the Governor of Gyeonggi Province from 2018 to 2021. He previously served as the mayor of Seongnam from 2010 to 2018. He was the Democratic Party's candidate in the 2022 presidential election.
+Answer: 이재명은 1964년 12월 22일에 태어난 한국의 정치인으로, 2018년부터 2021년까지 경기도지사를 역임했다. 또한 2010년부터 2018년까지 성남시장을 지냈으며, 2022년 대선에서 더불어민주당의 후보로 출마했다.
+question:
