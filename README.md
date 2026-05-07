@@ -42,10 +42,10 @@ python ReAct-hotpotqa-test.py
 ## 실행 결과 이미지
 
 ```markdown
-![실행 1결과 이미지](https://github.com/haoxueshan/ReAct-Example/blob/main/data/q1.png)
+![실행 1결과 이미지](data/q1.png)
 ```
 ```markdown
-![실행 2결과 이미지](https://github.com/haoxueshan/ReAct-Example/blob/main/data/q2.png)
+![실행 2결과 이미지](data/q2.png)
 ```
 
 
