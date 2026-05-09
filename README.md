@@ -41,12 +41,11 @@ python ReAct-hotpotqa-test.py
 
 ## 실행 결과 이미지
 
-```markdown
+```markdown```
 ![실행 1결과 이미지](data/q1.png)
-```
-```markdown
+
+```markdown```
 ![실행 2결과 이미지](data/q3.png)
-```
 
 
 
