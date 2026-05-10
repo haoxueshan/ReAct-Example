@@ -79,7 +79,7 @@ def search_wikipedia(query: str) -> str:
 
         results_text = []
 
-        for item in search_results[:5]:
+        for item in search_results[:10]:
             title = item.get("title", "")
             snippet = item.get("snippet", "")
 
@@ -318,6 +318,7 @@ Alan Turing 是谁？5 + 12.5 等于多少？
 - 必须基于 Observation。
 - 如果 Observation 不足，要明确说明无法确认。
 - 如果是实时信息，要说明“根据当前工具返回结果”。
+- 如果 Observation 是“没查到相关信息”，必须直接进入 Answer，不能继续搜索。
 
 ========================
 十一、示例
@@ -536,6 +537,7 @@ def run_react_agent(user_question: str, max_steps: int = 8):
 请继续推理。
 """
 
+
         llm_output = call_llm(prompt)
 
         print(llm_output)
@@ -576,8 +578,11 @@ def run_react_agent(user_question: str, max_steps: int = 8):
                 action_name,
                 action_input
             )
+        if step >= max_steps - 2:
+            observation = ("没查到相关信息，并且达到最大推理次数")
 
         print(f"\nObservation: {observation}")
+
 
         # =========================
         # 写入上下文
